@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    90deg,
+    #020024 0%,
+    #090979 35%,
+    #00d4ff 100%
+  );
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1,
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+form label {
+  font-weight: bold;
+  flex-basis: 100%;
+}
+
+form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  flex: 1;
+  min-width: 200px;
+}
+
+form button {
+  padding: 10px;
+  background: #00d4ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background: #00aaff;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+table th {
+  background: #090979;
+  color: white;
+}
+
+table td {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+table td input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+table button {
+  padding: 5px 10px;
+  background: #00d4ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+table button:hover {
+  background: #00aaff;
+}
+
+tbody {
+  height: 10%;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    width: 95%;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  form label,
+  form input {
+    flex-basis: 100%;
+    min-width: 100%;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  table button {
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  table button {
+    padding: 3px 6px;
+  }
+}
